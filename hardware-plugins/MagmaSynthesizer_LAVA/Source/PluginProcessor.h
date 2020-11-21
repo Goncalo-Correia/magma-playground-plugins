@@ -9,6 +9,8 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include "SynthSound.h"
+#include "SynthVoice.h"
 
 //==============================================================================
 /**
@@ -54,6 +56,12 @@ public:
     void setStateInformation (const void* data, int sizeInBytes) override;
 
 private:
+
+    juce::Synthesiser synthesizer;
+    SynthVoice* synthVoice;
+
+    double lastSampleRate;
+
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MagmaSynthesizer_lavaAudioProcessor)
 };

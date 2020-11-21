@@ -6,6 +6,8 @@
               companyName="Magma" cppLanguageStandard="17">
   <MAINGROUP id="RBstBW" name="MagmaSynthesizer_LAVA">
     <GROUP id="{9F27BAAD-5C78-C033-6A88-A2CD11D1CB61}" name="Source">
+      <FILE id="gMHKRi" name="SynthSound.h" compile="0" resource="0" file="Source/SynthSound.h"/>
+      <FILE id="PsuGzF" name="SynthVoice.h" compile="0" resource="0" file="Source/SynthVoice.h"/>
       <FILE id="SLaN1T" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="jMVhaq" name="PluginProcessor.h" compile="0" resource="0"
