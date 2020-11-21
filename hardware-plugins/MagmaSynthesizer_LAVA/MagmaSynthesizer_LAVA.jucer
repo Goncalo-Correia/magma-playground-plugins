@@ -2,7 +2,8 @@
 
 <JUCERPROJECT id="epHCpR" name="MagmaSynthesizer_LAVA" projectType="audioplug"
               useAppConfig="0" addUsingNamespaceToJuceHeader="0" displaySplashScreen="1"
-              jucerFormatVersion="1">
+              jucerFormatVersion="1" pluginCharacteristicsValue="pluginIsSynth,pluginProducesMidiOut,pluginWantsMidiIn"
+              companyName="Magma" cppLanguageStandard="17">
   <MAINGROUP id="RBstBW" name="MagmaSynthesizer_LAVA">
     <GROUP id="{9F27BAAD-5C78-C033-6A88-A2CD11D1CB61}" name="Source">
       <FILE id="SLaN1T" name="PluginProcessor.cpp" compile="1" resource="0"
