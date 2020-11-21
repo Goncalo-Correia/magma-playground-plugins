@@ -19,7 +19,7 @@ public:
 
     bool canPlaySound(juce::SynthesiserSound* synthesizerSound)
     {
-        /*Description - Gonçalo Correia - 11/21/2020
+        /*Description - GonÃ§alo Correia - 11/21/2020
         Will try to cast the sound as class SynthSound,
         if that cast is succesfull will return true, else false*/
         return dynamic_cast<SynthSound*>(synthesizerSound) != nullptr;

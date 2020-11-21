@@ -22,7 +22,7 @@ MagmaSynthesizer_lavaAudioProcessor::MagmaSynthesizer_lavaAudioProcessor()
                        )
 #endif
 {
-    /*Description - Gonçalo Correia - 11/21/2020
+    /*Description - GonÃ§alo Correia - 11/21/2020
     * Clears synthesizer voices and sounds for next play
     * Initializes synthesizer voices and sound
     */
@@ -109,7 +109,7 @@ void MagmaSynthesizer_lavaAudioProcessor::changeProgramName (int index, const ju
 //==============================================================================
 void MagmaSynthesizer_lavaAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
-    /*Description - Gonçalo Correia - 11/21/2020
+    /*Description - GonÃ§alo Correia - 11/21/2020
     * This will clear out unused samples from the last key press
     */
     juce::ignoreUnused(samplesPerBlock);
