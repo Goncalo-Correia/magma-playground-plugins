@@ -1068,7 +1068,7 @@ void maxiSample::autoTrim(float alpha, float threshold, bool trimStart, bool tri
         position=0;
         recordPosition=0;
         //envelope the start
-        int fadeSize=min((unsigned long)100, amplitudes.size());
+        int fadeSize=min<int>((unsigned long)100, amplitudes.size());
         for(int i=0; i < fadeSize; i++) {
             double factor = i / (double) fadeSize;
             amplitudes[i] = round(amplitudes[i] * factor);

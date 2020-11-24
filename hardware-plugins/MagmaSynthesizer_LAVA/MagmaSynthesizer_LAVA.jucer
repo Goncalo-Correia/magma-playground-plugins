@@ -1,58 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT id="epHCpR" name="MagmaSynthesizer_LAVA" projectType="audioplug"
+<JUCERPROJECT id="YfGDj3" name="MagmaSynthesizer_LAVA" projectType="audioplug"
               useAppConfig="0" addUsingNamespaceToJuceHeader="0" displaySplashScreen="1"
-              jucerFormatVersion="1" pluginCharacteristicsValue="pluginIsSynth,pluginProducesMidiOut,pluginWantsMidiIn"
-              companyName="Magma" cppLanguageStandard="17">
-  <MAINGROUP id="RBstBW" name="MagmaSynthesizer_LAVA">
-    <GROUP id="{9F27BAAD-5C78-C033-6A88-A2CD11D1CB61}" name="Source">
-      <GROUP id="{BD17E4CA-D49F-4D75-5D97-68833BBFF35E}" name="Maximilian">
-        <GROUP id="{D9C8E7CF-EDD7-2B0E-7997-AE47A02261EC}" name="src">
-          <GROUP id="{40813C49-8352-71FF-EA0C-BE9BCB5B3A1C}" name="libs">
-            <FILE id="kZtNea" name="fft.cpp" compile="1" resource="0" file="../../external-libraries/Maximilian/src/libs/fft.cpp"/>
-            <FILE id="kfTFtC" name="fft.h" compile="0" resource="0" file="../../external-libraries/Maximilian/src/libs/fft.h"/>
-            <FILE id="ULQd0V" name="maxiAtoms.cpp" compile="1" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiAtoms.cpp"/>
-            <FILE id="ILUmeF" name="maxiAtoms.h" compile="0" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiAtoms.h"/>
-            <FILE id="OAnHbT" name="maxiBark.cpp" compile="1" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiBark.cpp"/>
-            <FILE id="RztmjC" name="maxiBark.h" compile="0" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiBark.h"/>
-            <FILE id="PTlOxE" name="maxiConvolve.cpp" compile="1" resource="0"
-                  file="../../external-libraries/Maximilian/src/libs/maxiConvolve.cpp"/>
-            <FILE id="ur1aSG" name="maxiConvolve.h" compile="0" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiConvolve.h"/>
-            <FILE id="Mcqg75" name="maxiFFT.cpp" compile="1" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiFFT.cpp"/>
-            <FILE id="CKMspe" name="maxiFFT.h" compile="0" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiFFT.h"/>
-            <FILE id="ppo4XG" name="maxiGrains.cpp" compile="1" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiGrains.cpp"/>
-            <FILE id="zIe6DF" name="maxiGrains.h" compile="0" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiGrains.h"/>
-            <FILE id="SLRVUF" name="maxim.h" compile="0" resource="0" file="../../external-libraries/Maximilian/src/libs/maxim.h"/>
-            <FILE id="AAxuC5" name="maxiMFCC.cpp" compile="1" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiMFCC.cpp"/>
-            <FILE id="RgjwIa" name="maxiMFCC.h" compile="0" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiMFCC.h"/>
-            <FILE id="girDR4" name="maxiReverb.cpp" compile="1" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiReverb.cpp"/>
-            <FILE id="zKvmCQ" name="maxiReverb.h" compile="0" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiReverb.h"/>
-            <FILE id="hIxcbv" name="maxiSynths.cpp" compile="1" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiSynths.cpp"/>
-            <FILE id="ABegUt" name="maxiSynths.h" compile="0" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiSynths.h"/>
-            <FILE id="ctbsTz" name="sineTable.h" compile="0" resource="0" file="../../external-libraries/Maximilian/src/libs/sineTable.h"/>
-            <FILE id="kg92DU" name="stb_vorbis.c" compile="1" resource="0" file="../../external-libraries/Maximilian/src/libs/stb_vorbis.c"/>
-            <FILE id="ju76sa" name="stb_vorbis.h" compile="0" resource="0" file="../../external-libraries/Maximilian/src/libs/stb_vorbis.h"/>
+              jucerFormatVersion="1" companyName="Magma" pluginCharacteristicsValue="pluginIsSynth,pluginProducesMidiOut,pluginWantsMidiIn"
+              cppLanguageStandard="17">
+  <MAINGROUP id="Q435GZ" name="MagmaSynthesizer_LAVA">
+    <GROUP id="{419DA489-075D-F179-C7C8-C4444B5A3A2D}" name="Source">
+      <GROUP id="{A7D76474-7A6A-DB86-0676-2B4BA8BFB5F4}" name="Maximilian">
+        <GROUP id="{B8C1D9BB-CAE4-7317-0F1B-DE62C83DD620}" name="src">
+          <GROUP id="{1B38D0B9-3D35-AFDA-B002-E64561361344}" name="libs">
+            <FILE id="BYTpcU" name="fft.cpp" compile="1" resource="0" file="../../external-libraries/Maximilian/src/libs/fft.cpp"/>
+            <FILE id="TPzN9e" name="fft.h" compile="0" resource="0" file="../../external-libraries/Maximilian/src/libs/fft.h"/>
+            <FILE id="KoSDYd" name="maxiAtoms.cpp" compile="1" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiAtoms.cpp"/>
+            <FILE id="NGlojf" name="maxiAtoms.h" compile="0" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiAtoms.h"/>
+            <FILE id="kige55" name="maxiBark.cpp" compile="1" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiBark.cpp"/>
+            <FILE id="wkY1kj" name="maxiBark.h" compile="0" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiBark.h"/>
+            <FILE id="SHe6Bo" name="maxiFFT.cpp" compile="1" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiFFT.cpp"/>
+            <FILE id="n9BPYc" name="maxiFFT.h" compile="0" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiFFT.h"/>
+            <FILE id="G1XTfU" name="maxiGrains.cpp" compile="1" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiGrains.cpp"/>
+            <FILE id="DppZnd" name="maxiGrains.h" compile="0" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiGrains.h"/>
+            <FILE id="hmQCls" name="maxim.h" compile="0" resource="0" file="../../external-libraries/Maximilian/src/libs/maxim.h"/>
+            <FILE id="MGoG5g" name="maxiMFCC.cpp" compile="1" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiMFCC.cpp"/>
+            <FILE id="D3kzNH" name="maxiMFCC.h" compile="0" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiMFCC.h"/>
+            <FILE id="Kv8v1Q" name="maxiReverb.cpp" compile="1" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiReverb.cpp"/>
+            <FILE id="TteZp2" name="maxiReverb.h" compile="0" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiReverb.h"/>
+            <FILE id="OSf0Rh" name="maxiSynths.cpp" compile="1" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiSynths.cpp"/>
+            <FILE id="ngQ8zA" name="maxiSynths.h" compile="0" resource="0" file="../../external-libraries/Maximilian/src/libs/maxiSynths.h"/>
+            <FILE id="cvL33N" name="sineTable.h" compile="0" resource="0" file="../../external-libraries/Maximilian/src/libs/sineTable.h"/>
+            <FILE id="BBV8fb" name="stb_vorbis.c" compile="1" resource="0" file="../../external-libraries/Maximilian/src/libs/stb_vorbis.c"/>
+            <FILE id="kr1Axt" name="stb_vorbis.h" compile="0" resource="0" file="../../external-libraries/Maximilian/src/libs/stb_vorbis.h"/>
           </GROUP>
-          <FILE id="M0abtk" name="maximilian.cpp" compile="1" resource="0" file="../../external-libraries/Maximilian/src/maximilian.cpp"/>
-          <FILE id="LE0Ss5" name="maximilian.h" compile="0" resource="0" file="../../external-libraries/Maximilian/src/maximilian.h"/>
+          <FILE id="Dwhpuq" name="maximilian.cpp" compile="1" resource="0" file="../../external-libraries/Maximilian/src/maximilian.cpp"/>
+          <FILE id="P8h1UB" name="maximilian.h" compile="0" resource="0" file="../../external-libraries/Maximilian/src/maximilian.h"/>
         </GROUP>
+        <FILE id="ngsr2C" name="README.md" compile="0" resource="1" file="../../external-libraries/Maximilian/README.md"/>
       </GROUP>
-      <FILE id="gMHKRi" name="SynthSound.h" compile="0" resource="0" file="Source/SynthSound.h"/>
-      <FILE id="PsuGzF" name="SynthVoice.h" compile="0" resource="0" file="Source/SynthVoice.h"/>
-      <FILE id="SLaN1T" name="PluginProcessor.cpp" compile="1" resource="0"
+      <GROUP id="{8808B546-D9D4-1EDE-C9AF-C8A3DD892435}" name="SynthComponents">
+        <FILE id="TYmAdQ" name="SynthFilter.cpp" compile="1" resource="0" file="Source/SynthFilter.cpp"/>
+        <FILE id="LKVFBq" name="SynthFilter.h" compile="0" resource="0" file="Source/SynthFilter.h"/>
+        <FILE id="jKoyQ3" name="SynthEnvelope.cpp" compile="1" resource="0"
+              file="Source/SynthEnvelope.cpp"/>
+        <FILE id="ZIRNXP" name="SynthEnvelope.h" compile="0" resource="0" file="Source/SynthEnvelope.h"/>
+        <FILE id="eMAD6o" name="SynthOscillator.cpp" compile="1" resource="0"
+              file="Source/SynthOscillator.cpp"/>
+        <FILE id="s3xZGx" name="SynthOscillator.h" compile="0" resource="0"
+              file="Source/SynthOscillator.h"/>
+      </GROUP>
+      <GROUP id="{1751FC9F-BC8A-E072-6A57-8E7E35499401}" name="Enum">
+        <FILE id="HNBiiB" name="WaveformType.h" compile="0" resource="0" file="Source/WaveformType.h"/>
+      </GROUP>
+      <FILE id="JeTUP1" name="SynthSound.h" compile="0" resource="0" file="Source/SynthSound.h"/>
+      <FILE id="qHwWf4" name="SynthVoice.h" compile="0" resource="0" file="Source/SynthVoice.h"/>
+      <FILE id="aigxOA" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
-      <FILE id="jMVhaq" name="PluginProcessor.h" compile="0" resource="0"
+      <FILE id="QeF959" name="PluginProcessor.h" compile="0" resource="0"
             file="Source/PluginProcessor.h"/>
-      <FILE id="nHREMV" name="PluginEditor.cpp" compile="1" resource="0"
+      <FILE id="iwvFQJ" name="PluginEditor.cpp" compile="1" resource="0"
             file="Source/PluginEditor.cpp"/>
-      <FILE id="B6ewSd" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="KuRmg4" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
     </GROUP>
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
   <EXPORTFORMATS>
-    <VS2019 targetFolder="Builds/VisualStudio2019" externalLibraries="C:\Users\thirt\repos\magma-playground-plugins\external-libraries\Maximilian">
+    <VS2019 targetFolder="Builds/VisualStudio2019">
       <CONFIGURATIONS>
-        <CONFIGURATION isDebug="1" name="Debug" targetName="MagmaSynthesizer_LAVA"/>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="MagmaSynthesizer_LAVA" headerPath="C:\Users\thirt\repos\magma-playground-plugins\external-libraries\Maximilian"/>
         <CONFIGURATION isDebug="0" name="Release" targetName="MagmaSynthesizer_LAVA"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
@@ -69,7 +81,6 @@
         <MODULEPATH id="juce_graphics" path="../../../JUCE/modules"/>
         <MODULEPATH id="juce_gui_basics" path="../../../JUCE/modules"/>
         <MODULEPATH id="juce_gui_extra" path="../../../JUCE/modules"/>
-        <MODULEPATH id="juce_osc" path="../../../JUCE/modules"/>
       </MODULEPATHS>
     </VS2019>
   </EXPORTFORMATS>
@@ -88,7 +99,6 @@
     <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
-    <MODULE id="juce_osc" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
   </MODULES>
   <LIVE_SETTINGS>
     <WINDOWS/>

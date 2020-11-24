@@ -22,22 +22,16 @@ MagmaSynthesizer_lavaAudioProcessor::MagmaSynthesizer_lavaAudioProcessor()
                        )
 #endif
 {
-    /*Description - Gonçalo Correia - 11/21/2020
-    * Clears synthesizer voices and sounds for next play
-    * Initializes synthesizer voices and sound
-    */
-    synthesizer.clearVoices();
+    synthesiser.clearVoices();
 
-    for (int i = 0; i < 5; i++)
+    for (int voice = 0; voice < 5; voice++)
     {
-        synthesizer.addVoice(new SynthVoice());
+        synthesiser.addVoice(new SynthVoice());
     }
 
-    synthesizer.clearSounds();
+    synthesiser.clearSounds();
 
-    synthesizer.addSound(new SynthSound());
-
-
+    synthesiser.addSound(new SynthSound());
 }
 
 MagmaSynthesizer_lavaAudioProcessor::~MagmaSynthesizer_lavaAudioProcessor()
@@ -109,12 +103,10 @@ void MagmaSynthesizer_lavaAudioProcessor::changeProgramName (int index, const ju
 //==============================================================================
 void MagmaSynthesizer_lavaAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
-    /*Description - Gonçalo Correia - 11/21/2020
-    * This will clear out unused samples from the last key press
-    */
     juce::ignoreUnused(samplesPerBlock);
     lastSampleRate = sampleRate;
-    synthesizer.setCurrentPlaybackSampleRate(lastSampleRate);
+    synthesiser.setCurrentPlaybackSampleRate(lastSampleRate);
+
 }
 
 void MagmaSynthesizer_lavaAudioProcessor::releaseResources()
@@ -147,11 +139,12 @@ bool MagmaSynthesizer_lavaAudioProcessor::isBusesLayoutSupported (const BusesLay
 }
 #endif
 
-void MagmaSynthesizer_lavaAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages)
+void MagmaSynthesizer_lavaAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, 
+    juce::MidiBuffer& midiMessages)
 {
     buffer.clear();
 
-    synthesizer.renderNextBlock(buffer, midiMessages, 0, buffer.getNumSamples());
+    synthesiser.renderNextBlock(buffer, midiMessages, 0, buffer.getNumSamples());
 }
 
 //==============================================================================

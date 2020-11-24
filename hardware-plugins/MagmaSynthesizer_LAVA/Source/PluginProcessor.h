@@ -57,7 +57,7 @@ public:
 
 private:
 
-    juce::Synthesiser synthesizer;
+    juce::Synthesiser synthesiser;
     SynthVoice* synthVoice;
 
     double lastSampleRate;
