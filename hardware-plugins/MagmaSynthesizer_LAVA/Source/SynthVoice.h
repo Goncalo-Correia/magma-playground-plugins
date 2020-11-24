@@ -52,7 +52,7 @@ public:
 
         for (int sample = 0; sample < numSamples; ++sample)
         {
-            double osc1_wave = osc1.saw(frequency);
+            double osc1_wave = osc1.sinewave(frequency);
             double osc1_env1_sound = env_osc1.adsr(osc1_wave, env_osc1.trigger) * velocityLevel;
             double osc1_env1_filter1_sound = filter_osc1.lores(osc1_env1_sound, 200, 0.1);
             

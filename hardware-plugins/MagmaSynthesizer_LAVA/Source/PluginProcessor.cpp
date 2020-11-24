@@ -19,7 +19,8 @@ MagmaSynthesizer_lavaAudioProcessor::MagmaSynthesizer_lavaAudioProcessor()
                       #endif
                        .withOutput ("Output", juce::AudioChannelSet::stereo(), true)
                      #endif
-                       )
+                       ),
+    apvts(*this, nullptr)
 #endif
 {
     synthesiser.clearVoices();
@@ -32,6 +33,10 @@ MagmaSynthesizer_lavaAudioProcessor::MagmaSynthesizer_lavaAudioProcessor()
     synthesiser.clearSounds();
 
     synthesiser.addSound(new SynthSound());
+
+    juce::NormalisableRange<float> attackSlider_env1_range(0.1f, 5000.0f);
+    apvts.createAndAddParameter("ATTACK_ENV1", "Attack", "Attack", attackSlider_env1_range, 1.0f, nullptr, nullptr);
+    apvts.state = juce::ValueTree("save-parameters");
 }
 
 MagmaSynthesizer_lavaAudioProcessor::~MagmaSynthesizer_lavaAudioProcessor()
@@ -107,6 +112,7 @@ void MagmaSynthesizer_lavaAudioProcessor::prepareToPlay (double sampleRate, int 
     lastSampleRate = sampleRate;
     synthesiser.setCurrentPlaybackSampleRate(lastSampleRate);
 
+    previousAttackSliderValue_env1 = *apvts.getRawParameterValue("ATTACK_ENV1");
 }
 
 void MagmaSynthesizer_lavaAudioProcessor::releaseResources()
@@ -142,6 +148,12 @@ bool MagmaSynthesizer_lavaAudioProcessor::isBusesLayoutSupported (const BusesLay
 void MagmaSynthesizer_lavaAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, 
     juce::MidiBuffer& midiMessages)
 {
+    juce::ScopedNoDenormals noDenormals;
+    auto totalNumInputChannels = getTotalNumInputChannels();
+    auto totalNumOutputChannels = getTotalNumOutputChannels();
+
+    float currentAttackValue_env1 = *apvts.getRawParameterValue("ATTACK_ENV1");
+
     buffer.clear();
 
     synthesiser.renderNextBlock(buffer, midiMessages, 0, buffer.getNumSamples());

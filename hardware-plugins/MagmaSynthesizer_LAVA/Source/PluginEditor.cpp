@@ -16,6 +16,13 @@ MagmaSynthesizer_lavaAudioProcessorEditor::MagmaSynthesizer_lavaAudioProcessorEd
     // Make sure that before the constructor has finished, you've set the
     // editor's size to whatever you need it to be.
     setSize (400, 300);
+
+    attackSlider_env1.setSliderStyle(juce::Slider::SliderStyle::LinearVertical);
+    attackSlider_env1.setTextBoxStyle(juce::Slider::TextBoxBelow, true, 20, 20);
+    attackSlider_env1.setRange(0.1f, 5000.0f);
+    attackSlider_env1.addListener(this);
+
+    addAndMakeVisible(&attackSlider_env1);
 }
 
 MagmaSynthesizer_lavaAudioProcessorEditor::~MagmaSynthesizer_lavaAudioProcessorEditor()
@@ -28,13 +35,17 @@ void MagmaSynthesizer_lavaAudioProcessorEditor::paint (juce::Graphics& g)
     // (Our component is opaque, so we must completely fill the background with a solid colour)
     g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));
 
-    g.setColour (juce::Colours::white);
-    g.setFont (15.0f);
-    g.drawFittedText ("Hello World!", getLocalBounds(), juce::Justification::centred, 1);
 }
 
 void MagmaSynthesizer_lavaAudioProcessorEditor::resized()
 {
-    // This is generally where you'll want to lay out the positions of any
-    // subcomponents in your editor..
+    attackSlider_env1.setBounds(10, 10, 20, 100);
+}
+
+void MagmaSynthesizer_lavaAudioProcessorEditor::sliderValueChanged(juce::Slider* slider)
+{
+    if (slider == &attackSlider_env1)
+    {
+        audioProcessor.attackSliderValue_env1 = attackSlider_env1.getValue();
+    }
 }

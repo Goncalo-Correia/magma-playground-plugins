@@ -14,7 +14,7 @@
 //==============================================================================
 /**
 */
-class MagmaSynthesizer_lavaAudioProcessorEditor  : public juce::AudioProcessorEditor
+class MagmaSynthesizer_lavaAudioProcessorEditor  : public juce::AudioProcessorEditor, public juce::Slider::Listener
 {
 public:
     MagmaSynthesizer_lavaAudioProcessorEditor (MagmaSynthesizer_lavaAudioProcessor&);
@@ -23,8 +23,11 @@ public:
     //==============================================================================
     void paint (juce::Graphics&) override;
     void resized() override;
+    void sliderValueChanged(juce::Slider* slider) override;
 
 private:
+    juce::Slider attackSlider_env1;
+
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
     MagmaSynthesizer_lavaAudioProcessor& audioProcessor;
