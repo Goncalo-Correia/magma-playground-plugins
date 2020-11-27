@@ -39,14 +39,14 @@
         <FILE id="ngsr2C" name="README.md" compile="0" resource="1" file="../../external-libraries/Maximilian/README.md"/>
       </GROUP>
       <GROUP id="{8808B546-D9D4-1EDE-C9AF-C8A3DD892435}" name="SynthComponents">
-        <FILE id="TYmAdQ" name="SynthFilter.cpp" compile="1" resource="0" file="Source/SynthFilter.cpp"/>
-        <FILE id="LKVFBq" name="SynthFilter.h" compile="0" resource="0" file="Source/SynthFilter.h"/>
-        <FILE id="jKoyQ3" name="SynthEnvelope.cpp" compile="1" resource="0"
+        <FILE id="SH51Lx" name="SynthEnvelope.cpp" compile="1" resource="0"
               file="Source/SynthEnvelope.cpp"/>
-        <FILE id="ZIRNXP" name="SynthEnvelope.h" compile="0" resource="0" file="Source/SynthEnvelope.h"/>
-        <FILE id="eMAD6o" name="SynthOscillator.cpp" compile="1" resource="0"
+        <FILE id="MNTx41" name="SynthEnvelope.h" compile="0" resource="0" file="Source/SynthEnvelope.h"/>
+        <FILE id="gKJE9e" name="SynthFilter.cpp" compile="1" resource="0" file="Source/SynthFilter.cpp"/>
+        <FILE id="EUBxQe" name="SynthFilter.h" compile="0" resource="0" file="Source/SynthFilter.h"/>
+        <FILE id="jMmD6m" name="SynthOscillator.cpp" compile="1" resource="0"
               file="Source/SynthOscillator.cpp"/>
-        <FILE id="s3xZGx" name="SynthOscillator.h" compile="0" resource="0"
+        <FILE id="Yt5u0D" name="SynthOscillator.h" compile="0" resource="0"
               file="Source/SynthOscillator.h"/>
       </GROUP>
       <GROUP id="{1751FC9F-BC8A-E072-6A57-8E7E35499401}" name="Enum">

@@ -499,10 +499,10 @@
     <ClCompile Include="..\..\..\..\external-libraries\Maximilian\src\maximilian.cpp">
       <Filter>MagmaSynthesizer_LAVA\Source\Maximilian\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\SynthFilter.cpp">
+    <ClCompile Include="..\..\Source\SynthEnvelope.cpp">
       <Filter>MagmaSynthesizer_LAVA\Source\SynthComponents</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\SynthEnvelope.cpp">
+    <ClCompile Include="..\..\Source\SynthFilter.cpp">
       <Filter>MagmaSynthesizer_LAVA\Source\SynthComponents</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\SynthOscillator.cpp">
@@ -2697,10 +2697,10 @@
     <ClInclude Include="..\..\..\..\external-libraries\Maximilian\src\maximilian.h">
       <Filter>MagmaSynthesizer_LAVA\Source\Maximilian\src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\SynthFilter.h">
+    <ClInclude Include="..\..\Source\SynthEnvelope.h">
       <Filter>MagmaSynthesizer_LAVA\Source\SynthComponents</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\SynthEnvelope.h">
+    <ClInclude Include="..\..\Source\SynthFilter.h">
       <Filter>MagmaSynthesizer_LAVA\Source\SynthComponents</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\SynthOscillator.h">

@@ -147,8 +147,8 @@
     <ClCompile Include="..\..\..\..\external-libraries\Maximilian\src\libs\maxiSynths.cpp"/>
     <ClCompile Include="..\..\..\..\external-libraries\Maximilian\src\libs\stb_vorbis.c"/>
     <ClCompile Include="..\..\..\..\external-libraries\Maximilian\src\maximilian.cpp"/>
-    <ClCompile Include="..\..\Source\SynthFilter.cpp"/>
     <ClCompile Include="..\..\Source\SynthEnvelope.cpp"/>
+    <ClCompile Include="..\..\Source\SynthFilter.cpp"/>
     <ClCompile Include="..\..\Source\SynthOscillator.cpp"/>
     <ClCompile Include="..\..\Source\PluginProcessor.cpp"/>
     <ClCompile Include="..\..\Source\PluginEditor.cpp"/>
@@ -2164,8 +2164,8 @@
     <ClInclude Include="..\..\..\..\external-libraries\Maximilian\src\libs\sineTable.h"/>
     <ClInclude Include="..\..\..\..\external-libraries\Maximilian\src\libs\stb_vorbis.h"/>
     <ClInclude Include="..\..\..\..\external-libraries\Maximilian\src\maximilian.h"/>
-    <ClInclude Include="..\..\Source\SynthFilter.h"/>
     <ClInclude Include="..\..\Source\SynthEnvelope.h"/>
+    <ClInclude Include="..\..\Source\SynthFilter.h"/>
     <ClInclude Include="..\..\Source\SynthOscillator.h"/>
     <ClInclude Include="..\..\Source\WaveformType.h"/>
     <ClInclude Include="..\..\Source\SynthSound.h"/>

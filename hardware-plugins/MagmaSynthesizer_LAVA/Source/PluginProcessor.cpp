@@ -25,7 +25,7 @@ MagmaSynthesizer_lavaAudioProcessor::MagmaSynthesizer_lavaAudioProcessor()
 #endif
 {
     juce::NormalisableRange<float> attack_env1_range(0.1f, 5000.0f);
-    apvts.createAndAddParameter(ATTACK_ENV1_ID, ATTACK_ENV_NAME, ATTACK_ENV_NAME, attack_env1_range, 0.1f, nullptr, nullptr);
+    apvts.createAndAddParameter(ATTACK_ENV1_ID, ATTACK_ENV_NAME, ATTACK_ENV_NAME, attack_env1_range, 300.0f, nullptr, nullptr);
     apvts.state = juce::ValueTree(LAVA_STATE);
 
     synthesiser.clearVoices();

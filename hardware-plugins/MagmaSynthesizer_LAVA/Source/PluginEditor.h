@@ -10,6 +10,9 @@
 
 #include <JuceHeader.h>
 #include "PluginProcessor.h"
+#include "SynthEnvelope.h"
+#include "SynthOscillator.h"
+#include "SynthFilter.h"
 
 //==============================================================================
 /**
@@ -42,5 +45,20 @@ private:
     juce::Slider sustainSlider_env1;
     juce::Slider releaseSlider_env1;
 
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MagmaSynthesizer_lavaAudioProcessorEditor)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(MagmaSynthesizer_lavaAudioProcessorEditor)
+
+        //==============================================================================
+
+    SynthOscillator osc1;
+    SynthOscillator osc2;
+    SynthOscillator osc3;
+
+    SynthEnvelope env1;
+    SynthEnvelope env2;
+    SynthEnvelope env3;
+
+    SynthFilter filter1;
+    SynthFilter filter2;
+    SynthFilter filter3;
+    SynthFilter masterFilter;
 };
