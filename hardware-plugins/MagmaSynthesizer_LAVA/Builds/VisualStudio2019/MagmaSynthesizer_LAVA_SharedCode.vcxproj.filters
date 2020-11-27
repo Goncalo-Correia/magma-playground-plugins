@@ -2,6 +2,9 @@
 
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="MagmaSynthesizer_LAVA\Source\Parameters">
+      <UniqueIdentifier>{C4FBB45B-61F1-BA03-F902-4D02C8D788B9}</UniqueIdentifier>
+    </Filter>
     <Filter Include="MagmaSynthesizer_LAVA\Source\Maximilian\src\libs">
       <UniqueIdentifier>{668FDDFB-666F-CC64-36FC-511A66813DD8}</UniqueIdentifier>
     </Filter>
@@ -2655,6 +2658,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\Parameters.h">
+      <Filter>MagmaSynthesizer_LAVA\Source\Parameters</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\..\..\external-libraries\Maximilian\src\libs\fft.h">
       <Filter>MagmaSynthesizer_LAVA\Source\Maximilian\src\libs</Filter>
     </ClInclude>

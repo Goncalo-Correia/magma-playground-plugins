@@ -2151,6 +2151,7 @@
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_gui_extra.cpp"/>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\Parameters.h"/>
     <ClInclude Include="..\..\..\..\external-libraries\Maximilian\src\libs\fft.h"/>
     <ClInclude Include="..\..\..\..\external-libraries\Maximilian\src\libs\maxiAtoms.h"/>
     <ClInclude Include="..\..\..\..\external-libraries\Maximilian\src\libs\maxiBark.h"/>

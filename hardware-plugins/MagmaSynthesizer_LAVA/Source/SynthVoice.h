@@ -42,13 +42,17 @@ public:
         }
     }
 
+    void getEnvelope1Params(float attack)
+    {
+        env_osc1.setAttack(double(attack));
+    }
+
     void renderNextBlock (juce::AudioBuffer< float >& outputBuffer, 
         int startSample, int numSamples)
     {
-        env_osc1.setAttack(2000);
-        env_osc1.setDecay(500);
-        env_osc1.setSustain(0.8);
-        env_osc1.setRelease(2000);
+        env_osc1.setDecay(500.0f);
+        env_osc1.setSustain(0.8f);
+        env_osc1.setRelease(2000.0f);
 
         for (int sample = 0; sample < numSamples; ++sample)
         {

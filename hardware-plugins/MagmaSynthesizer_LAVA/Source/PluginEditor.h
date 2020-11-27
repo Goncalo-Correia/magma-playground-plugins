@@ -23,14 +23,24 @@ public:
     //==============================================================================
     void paint (juce::Graphics&) override;
     void resized() override;
-    void sliderValueChanged(juce::Slider* slider) override;
+
+    void sliderValueChanged(juce::Slider* slider) override; //inherited from juce::Slider::Listener
 
 private:
-    juce::Slider attackSlider_env1;
 
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
     MagmaSynthesizer_lavaAudioProcessor& audioProcessor;
+
+    juce::ScopedPointer <juce::AudioProcessorValueTreeState::SliderAttachment> attackSliderAttachment;
+    juce::ScopedPointer <juce::AudioProcessorValueTreeState::SliderAttachment> decaySliderAttachment;
+    juce::ScopedPointer <juce::AudioProcessorValueTreeState::SliderAttachment> sustainSliderAttachment;
+    juce::ScopedPointer <juce::AudioProcessorValueTreeState::SliderAttachment> releaseSliderAttachment;
+
+    juce::Slider attackSlider_env1;
+    juce::Slider decaySlider_env1;
+    juce::Slider sustainSlider_env1;
+    juce::Slider releaseSlider_env1;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MagmaSynthesizer_lavaAudioProcessorEditor)
 };

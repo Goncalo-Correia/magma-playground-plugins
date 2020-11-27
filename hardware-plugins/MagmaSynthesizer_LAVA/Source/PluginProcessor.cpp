@@ -8,6 +8,7 @@
 
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
+#include "Parameters.h"
 
 //==============================================================================
 MagmaSynthesizer_lavaAudioProcessor::MagmaSynthesizer_lavaAudioProcessor()
@@ -23,6 +24,10 @@ MagmaSynthesizer_lavaAudioProcessor::MagmaSynthesizer_lavaAudioProcessor()
     apvts(*this, nullptr)
 #endif
 {
+    juce::NormalisableRange<float> attack_env1_range(0.1f, 5000.0f);
+    apvts.createAndAddParameter(ATTACK_ENV1_ID, ATTACK_ENV_NAME, ATTACK_ENV_NAME, attack_env1_range, 0.1f, nullptr, nullptr);
+    apvts.state = juce::ValueTree(LAVA_STATE);
+
     synthesiser.clearVoices();
 
     for (int voice = 0; voice < 5; voice++)
@@ -33,10 +38,6 @@ MagmaSynthesizer_lavaAudioProcessor::MagmaSynthesizer_lavaAudioProcessor()
     synthesiser.clearSounds();
 
     synthesiser.addSound(new SynthSound());
-
-    juce::NormalisableRange<float> attackSlider_env1_range(0.1f, 5000.0f);
-    apvts.createAndAddParameter("ATTACK_ENV1", "Attack", "Attack", attackSlider_env1_range, 1.0f, nullptr, nullptr);
-    apvts.state = juce::ValueTree("save-parameters");
 }
 
 MagmaSynthesizer_lavaAudioProcessor::~MagmaSynthesizer_lavaAudioProcessor()
@@ -111,8 +112,6 @@ void MagmaSynthesizer_lavaAudioProcessor::prepareToPlay (double sampleRate, int 
     juce::ignoreUnused(samplesPerBlock);
     lastSampleRate = sampleRate;
     synthesiser.setCurrentPlaybackSampleRate(lastSampleRate);
-
-    previousAttackSliderValue_env1 = *apvts.getRawParameterValue("ATTACK_ENV1");
 }
 
 void MagmaSynthesizer_lavaAudioProcessor::releaseResources()
@@ -152,7 +151,13 @@ void MagmaSynthesizer_lavaAudioProcessor::processBlock (juce::AudioBuffer<float>
     auto totalNumInputChannels = getTotalNumInputChannels();
     auto totalNumOutputChannels = getTotalNumOutputChannels();
 
-    float currentAttackValue_env1 = *apvts.getRawParameterValue("ATTACK_ENV1");
+    for (int i = 0; i < synthesiser.getNumVoices(); i++)
+    {
+        if (synthVoice = dynamic_cast<SynthVoice*>(synthesiser.getVoice(i)))
+        {
+            synthVoice->getEnvelope1Params(apvts.getRawParameterValue(ATTACK_ENV1_ID)->load());
+        }
+    }
 
     buffer.clear();
 

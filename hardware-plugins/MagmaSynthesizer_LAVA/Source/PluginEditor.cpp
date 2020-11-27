@@ -8,6 +8,7 @@
 
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
+#include "Parameters.h"
 
 //==============================================================================
 MagmaSynthesizer_lavaAudioProcessorEditor::MagmaSynthesizer_lavaAudioProcessorEditor (MagmaSynthesizer_lavaAudioProcessor& p)
@@ -18,11 +19,13 @@ MagmaSynthesizer_lavaAudioProcessorEditor::MagmaSynthesizer_lavaAudioProcessorEd
     setSize (400, 300);
 
     attackSlider_env1.setSliderStyle(juce::Slider::SliderStyle::LinearVertical);
-    attackSlider_env1.setTextBoxStyle(juce::Slider::TextBoxBelow, true, 20, 20);
+    attackSlider_env1.setTextBoxStyle(juce::Slider::TextBoxBelow, true, 50, 30); 
     attackSlider_env1.setRange(0.1f, 5000.0f);
+    attackSlider_env1.setValue(0.1f);
     attackSlider_env1.addListener(this);
-
     addAndMakeVisible(&attackSlider_env1);
+
+    attackSliderAttachment = new juce::AudioProcessorValueTreeState::SliderAttachment(audioProcessor.apvts, ATTACK_ENV1_ID, attackSlider_env1);
 }
 
 MagmaSynthesizer_lavaAudioProcessorEditor::~MagmaSynthesizer_lavaAudioProcessorEditor()
@@ -39,13 +42,13 @@ void MagmaSynthesizer_lavaAudioProcessorEditor::paint (juce::Graphics& g)
 
 void MagmaSynthesizer_lavaAudioProcessorEditor::resized()
 {
-    attackSlider_env1.setBounds(10, 10, 20, 100);
+    attackSlider_env1.setBounds(10, 10, 50, 150);
 }
 
 void MagmaSynthesizer_lavaAudioProcessorEditor::sliderValueChanged(juce::Slider* slider)
 {
     if (slider == &attackSlider_env1)
     {
-        audioProcessor.attackSliderValue_env1 = attackSlider_env1.getValue();
+        audioProcessor.attackTime_env1 = attackSlider_env1.getValue();
     }
 }

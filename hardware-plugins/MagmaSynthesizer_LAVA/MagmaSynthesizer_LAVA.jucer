@@ -6,6 +6,9 @@
               cppLanguageStandard="17">
   <MAINGROUP id="Q435GZ" name="MagmaSynthesizer_LAVA">
     <GROUP id="{419DA489-075D-F179-C7C8-C4444B5A3A2D}" name="Source">
+      <GROUP id="{035D8B27-B6E8-F565-BACD-965B31809505}" name="Parameters">
+        <FILE id="BsfzUB" name="Parameters.h" compile="0" resource="0" file="Source/Parameters.h"/>
+      </GROUP>
       <GROUP id="{A7D76474-7A6A-DB86-0676-2B4BA8BFB5F4}" name="Maximilian">
         <GROUP id="{B8C1D9BB-CAE4-7317-0F1B-DE62C83DD620}" name="src">
           <GROUP id="{1B38D0B9-3D35-AFDA-B002-E64561361344}" name="libs">

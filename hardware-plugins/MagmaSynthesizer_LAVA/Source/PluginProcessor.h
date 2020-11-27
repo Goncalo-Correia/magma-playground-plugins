@@ -55,8 +55,7 @@ public:
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
 
-    float attackSliderValue_env1;
-    float previousAttackSliderValue_env1;
+    float attackTime_env1;
 
     juce::AudioProcessorValueTreeState apvts;
 
