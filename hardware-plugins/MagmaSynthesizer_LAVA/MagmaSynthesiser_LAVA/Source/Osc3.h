@@ -1,8 +1,8 @@
 /*
   ==============================================================================
 
-    SynthOscillator.h
-    Created: 26 Nov 2020 11:25:00pm
+    Osc3.h
+    Created: 15 Dec 2020 10:23:14pm
     Author:  thirt
 
   ==============================================================================
@@ -15,15 +15,15 @@
 //==============================================================================
 /*
 */
-class SynthOscillator  : public juce::Component
+class Osc3  : public juce::Component
 {
 public:
-    SynthOscillator();
-    ~SynthOscillator() override;
+    Osc3();
+    ~Osc3() override;
 
     void paint (juce::Graphics&) override;
     void resized() override;
 
 private:
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SynthOscillator)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (Osc3)
 };

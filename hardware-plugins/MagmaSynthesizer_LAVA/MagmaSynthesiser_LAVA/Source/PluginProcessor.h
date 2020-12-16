@@ -15,12 +15,12 @@
 //==============================================================================
 /**
 */
-class MagmaSynthesizer_lavaAudioProcessor  : public juce::AudioProcessor
+class MagmaSynthesiser_lavaAudioProcessor  : public juce::AudioProcessor
 {
 public:
     //==============================================================================
-    MagmaSynthesizer_lavaAudioProcessor();
-    ~MagmaSynthesizer_lavaAudioProcessor() override;
+    MagmaSynthesiser_lavaAudioProcessor();
+    ~MagmaSynthesiser_lavaAudioProcessor() override;
 
     //==============================================================================
     void prepareToPlay (double sampleRate, int samplesPerBlock) override;
@@ -55,17 +55,14 @@ public:
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
 
-    float attackTime_env1;
-
-    juce::AudioProcessorValueTreeState apvts;
-
 private:
+    juce::Synthesiser synth;
 
-    juce::Synthesiser synthesiser;
-    SynthVoice* synthVoice;
+    juce::dsp::Oscillator<float> osc1;
+    juce::dsp::Oscillator<float> osc2;
+    juce::dsp::Oscillator<float> osc3;
 
-    double lastSampleRate;
-
+    juce::dsp::Gain<float> masterGain;
     //==============================================================================
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MagmaSynthesizer_lavaAudioProcessor)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MagmaSynthesiser_lavaAudioProcessor)
 };

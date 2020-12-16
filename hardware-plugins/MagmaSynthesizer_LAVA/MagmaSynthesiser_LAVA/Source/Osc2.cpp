@@ -1,29 +1,29 @@
 /*
   ==============================================================================
 
-    SynthFilter.cpp
-    Created: 26 Nov 2020 11:25:19pm
+    Osc2.cpp
+    Created: 15 Dec 2020 10:23:08pm
     Author:  thirt
 
   ==============================================================================
 */
 
 #include <JuceHeader.h>
-#include "SynthFilter.h"
+#include "Osc2.h"
 
 //==============================================================================
-SynthFilter::SynthFilter()
+Osc2::Osc2()
 {
     // In your constructor, you should add any child components, and
     // initialise any special settings that your component needs.
 
 }
 
-SynthFilter::~SynthFilter()
+Osc2::~Osc2()
 {
 }
 
-void SynthFilter::paint (juce::Graphics& g)
+void Osc2::paint (juce::Graphics& g)
 {
     /* This demo code just fills the component's background and
        draws some placeholder text to get you started.
@@ -39,11 +39,11 @@ void SynthFilter::paint (juce::Graphics& g)
 
     g.setColour (juce::Colours::white);
     g.setFont (14.0f);
-    g.drawText ("SynthFilter", getLocalBounds(),
+    g.drawText ("Osc2", getLocalBounds(),
                 juce::Justification::centred, true);   // draw some placeholder text
 }
 
-void SynthFilter::resized()
+void Osc2::resized()
 {
     // This method is where you should set the bounds of any child
     // components that your component contains..

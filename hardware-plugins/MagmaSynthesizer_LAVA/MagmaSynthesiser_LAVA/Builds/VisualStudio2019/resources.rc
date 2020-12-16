@@ -15,10 +15,9 @@ BEGIN
   BEGIN
     BLOCK "040904E4"
     BEGIN
-      VALUE "CompanyName",  "Magma\0"
-      VALUE "FileDescription",  "MagmaSynthesizer_LAVA\0"
+      VALUE "FileDescription",  "MagmaSynthesiser_LAVA\0"
       VALUE "FileVersion",  "1.0.0\0"
-      VALUE "ProductName",  "MagmaSynthesizer_LAVA\0"
+      VALUE "ProductName",  "MagmaSynthesiser_LAVA\0"
       VALUE "ProductVersion",  "1.0.0\0"
     END
   END

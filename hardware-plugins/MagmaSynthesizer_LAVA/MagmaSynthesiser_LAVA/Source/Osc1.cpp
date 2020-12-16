@@ -1,29 +1,29 @@
 /*
   ==============================================================================
 
-    SynthOscillator.cpp
-    Created: 26 Nov 2020 11:25:00pm
+    Osc1.cpp
+    Created: 15 Dec 2020 10:23:02pm
     Author:  thirt
 
   ==============================================================================
 */
 
 #include <JuceHeader.h>
-#include "SynthOscillator.h"
+#include "Osc1.h"
 
 //==============================================================================
-SynthOscillator::SynthOscillator()
+Osc1::Osc1()
 {
     // In your constructor, you should add any child components, and
     // initialise any special settings that your component needs.
 
 }
 
-SynthOscillator::~SynthOscillator()
+Osc1::~Osc1()
 {
 }
 
-void SynthOscillator::paint (juce::Graphics& g)
+void Osc1::paint (juce::Graphics& g)
 {
     /* This demo code just fills the component's background and
        draws some placeholder text to get you started.
@@ -39,11 +39,11 @@ void SynthOscillator::paint (juce::Graphics& g)
 
     g.setColour (juce::Colours::white);
     g.setFont (14.0f);
-    g.drawText ("SynthOscillator", getLocalBounds(),
+    g.drawText ("Osc1", getLocalBounds(),
                 juce::Justification::centred, true);   // draw some placeholder text
 }
 
-void SynthOscillator::resized()
+void Osc1::resized()
 {
     // This method is where you should set the bounds of any child
     // components that your component contains..

@@ -2,7 +2,7 @@
   ==============================================================================
 
     SynthSound.h
-    Created: 21 Nov 2020 11:37:16pm
+    Created: 15 Dec 2020 11:00:17pm
     Author:  thirt
 
   ==============================================================================
@@ -16,13 +16,16 @@ class SynthSound : public juce::SynthesiserSound
 {
 public:
 
-    bool appliesToNote (int midiNoteNumber)
+    bool appliesToNote (int midiNoteNumber) override
     {
         return true;
     }
 
-    bool appliesToChannel (int midiChannel)
+    bool appliesToChannel (int midiChannel) override
     {
         return true;
     }
+
+private:
+
 };

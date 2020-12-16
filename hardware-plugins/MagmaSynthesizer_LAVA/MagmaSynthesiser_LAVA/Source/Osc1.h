@@ -1,8 +1,8 @@
 /*
   ==============================================================================
 
-    SynthEnvelope.h
-    Created: 26 Nov 2020 11:25:10pm
+    Osc1.h
+    Created: 15 Dec 2020 10:23:02pm
     Author:  thirt
 
   ==============================================================================
@@ -11,20 +11,19 @@
 #pragma once
 
 #include <JuceHeader.h>
-#include "Parameters.h"
 
 //==============================================================================
 /*
 */
-class SynthEnvelope  : public juce::Component
+class Osc1  : public juce::Component
 {
 public:
-    SynthEnvelope();
-    ~SynthEnvelope() override;
+    Osc1();
+    ~Osc1() override;
 
     void paint (juce::Graphics&) override;
     void resized() override;
 
 private:
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SynthEnvelope)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (Osc1)
 };
