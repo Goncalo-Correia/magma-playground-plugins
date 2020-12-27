@@ -2,7 +2,7 @@
 
 <JUCERPROJECT id="anS20T" name="MagmaSynthesiser_LAVA" projectType="audioplug"
               useAppConfig="0" addUsingNamespaceToJuceHeader="0" displaySplashScreen="1"
-              jucerFormatVersion="1">
+              jucerFormatVersion="1" pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn">
   <MAINGROUP id="SQktTJ" name="MagmaSynthesiser_LAVA">
     <GROUP id="{0095B20F-7ACE-D664-A0F4-F03104094DA1}" name="Source">
       <FILE id="mX8klF" name="PluginProcessor.cpp" compile="1" resource="0"
@@ -14,7 +14,14 @@
       <FILE id="bCVKp3" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
       <GROUP id="{C46EA4B4-51B1-93F3-55C9-C2EEEA391F2F}" name="SynthComponents">
         <GROUP id="{6095F384-C73F-7419-D570-394AE6415794}" name="Filters"/>
-        <GROUP id="{633E0318-9716-7DBF-3AE6-A0517523E43E}" name="Envelopes"/>
+        <GROUP id="{633E0318-9716-7DBF-3AE6-A0517523E43E}" name="Envelopes">
+          <FILE id="vU2AXY" name="Env1.cpp" compile="1" resource="0" file="Source/Env1.cpp"/>
+          <FILE id="kIuykV" name="Env1.h" compile="0" resource="0" file="Source/Env1.h"/>
+          <FILE id="lbSXML" name="Env2.cpp" compile="1" resource="0" file="Source/Env2.cpp"/>
+          <FILE id="Z7ZXZ9" name="Env2.h" compile="0" resource="0" file="Source/Env2.h"/>
+          <FILE id="sJmH5Q" name="Env3.cpp" compile="1" resource="0" file="Source/Env3.cpp"/>
+          <FILE id="aqDOHR" name="Env3.h" compile="0" resource="0" file="Source/Env3.h"/>
+        </GROUP>
         <GROUP id="{7E61AB4D-C90F-7B71-40A1-A2AE8360FB57}" name="Oscillators">
           <FILE id="xdiP9O" name="Osc1.cpp" compile="1" resource="0" file="Source/Osc1.cpp"/>
           <FILE id="ojhkSx" name="Osc1.h" compile="0" resource="0" file="Source/Osc1.h"/>
@@ -22,13 +29,15 @@
           <FILE id="HxM5i6" name="Osc2.h" compile="0" resource="0" file="Source/Osc2.h"/>
           <FILE id="zwcV73" name="Osc3.cpp" compile="1" resource="0" file="Source/Osc3.cpp"/>
           <FILE id="z0c3II" name="Osc3.h" compile="0" resource="0" file="Source/Osc3.h"/>
-          <FILE id="u4c78H" name="Waveform.h" compile="0" resource="0" file="Source/Waveform.h"/>
-          <FILE id="jUasK7" name="Wavetype.h" compile="0" resource="0" file="Source/Wavetype.h"/>
+          <FILE id="u4c78H" name="WaveForm.h" compile="0" resource="0" file="Source/WaveForm.h"/>
+          <FILE id="jUasK7" name="WaveType.h" compile="0" resource="0" file="Source/WaveType.h"/>
         </GROUP>
       </GROUP>
-      <FILE id="xh6Cto" name="SynthVoice.cpp" compile="1" resource="0" file="Source/SynthVoice.cpp"/>
-      <FILE id="eNbO5l" name="SynthVoice.h" compile="0" resource="0" file="Source/SynthVoice.h"/>
-      <FILE id="p4uJpL" name="SynthSound.h" compile="0" resource="0" file="Source/SynthSound.h"/>
+      <GROUP id="{BFB46C5B-089E-5236-FD2B-8E229AA8A0C0}" name="Synthesiser">
+        <FILE id="xh6Cto" name="SynthVoice.cpp" compile="1" resource="0" file="Source/SynthVoice.cpp"/>
+        <FILE id="eNbO5l" name="SynthVoice.h" compile="0" resource="0" file="Source/SynthVoice.h"/>
+        <FILE id="p4uJpL" name="SynthSound.h" compile="0" resource="0" file="Source/SynthSound.h"/>
+      </GROUP>
     </GROUP>
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>

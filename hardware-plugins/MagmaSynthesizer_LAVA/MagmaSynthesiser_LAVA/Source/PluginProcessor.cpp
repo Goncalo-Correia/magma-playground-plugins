@@ -95,24 +95,15 @@ void MagmaSynthesiser_lavaAudioProcessor::changeProgramName (int index, const ju
 //==============================================================================
 void MagmaSynthesiser_lavaAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
-    juce::dsp::ProcessSpec processSpec;
-    processSpec.maximumBlockSize = samplesPerBlock;
-    processSpec.sampleRate = sampleRate;
-    processSpec.numChannels = getTotalNumOutputChannels();
-
     synth.setCurrentPlaybackSampleRate(sampleRate);
-    /*
-    osc1.prepare (processSpec);
-    osc2.prepare (processSpec);
-    osc3.prepare (processSpec);
 
-    osc1.setFrequency (220.0f);
-    osc2.setFrequency (330.0f);
-    osc3.setFrequency (440.0f);
-
-    masterGain.prepare(processSpec);
-    masterGain.setGainLinear(0.01f);
-    */
+    for (int i = 0; i < synth.getNumVoices(); i++)
+    {
+        if (auto voice = dynamic_cast<SynthVoice*>(synth.getVoice(i)))
+        {
+            voice->prepareToPlay(sampleRate, samplesPerBlock, getTotalNumOutputChannels());
+        }
+    }
 }
 
 void MagmaSynthesiser_lavaAudioProcessor::releaseResources()
@@ -164,19 +155,6 @@ void MagmaSynthesiser_lavaAudioProcessor::processBlock (juce::AudioBuffer<float>
             //LFO
         }
     }
-
-    /*
-    juce::dsp::AudioBlock<float> audioBlock
-    { 
-        buffer 
-    };
-
-    osc1.process (juce::dsp::ProcessContextReplacing<float>(audioBlock));
-    osc2.process (juce::dsp::ProcessContextReplacing<float>(audioBlock));
-    osc3.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
-
-    masterGain.process (juce::dsp::ProcessContextReplacing<float>(audioBlock));
-    */
 
     synth.renderNextBlock(buffer, midiMessages, 0, buffer.getNumSamples());
 }

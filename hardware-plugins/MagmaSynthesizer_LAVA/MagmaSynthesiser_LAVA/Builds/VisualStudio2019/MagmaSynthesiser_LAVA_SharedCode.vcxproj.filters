@@ -2,11 +2,17 @@
 
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="MagmaSynthesiser_LAVA\Source\SynthComponents\Envelopes">
+      <UniqueIdentifier>{839465F6-2A4F-2A0B-1860-CAFDED874081}</UniqueIdentifier>
+    </Filter>
     <Filter Include="MagmaSynthesiser_LAVA\Source\SynthComponents\Oscillators">
       <UniqueIdentifier>{9E661364-AD4E-C7D0-5B72-2675B80215BD}</UniqueIdentifier>
     </Filter>
     <Filter Include="MagmaSynthesiser_LAVA\Source\SynthComponents">
       <UniqueIdentifier>{DC5D3133-0F33-B8E1-3EAC-B3FEE0045FED}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MagmaSynthesiser_LAVA\Source\Synthesiser">
+      <UniqueIdentifier>{8C395C01-026E-DD16-D033-09C95353D398}</UniqueIdentifier>
     </Filter>
     <Filter Include="MagmaSynthesiser_LAVA\Source">
       <UniqueIdentifier>{3154B48D-8921-E703-A540-DD52A424B624}</UniqueIdentifier>
@@ -463,6 +469,15 @@
     <ClCompile Include="..\..\Source\PluginEditor.cpp">
       <Filter>MagmaSynthesiser_LAVA\Source</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Env1.cpp">
+      <Filter>MagmaSynthesiser_LAVA\Source\SynthComponents\Envelopes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Env2.cpp">
+      <Filter>MagmaSynthesiser_LAVA\Source\SynthComponents\Envelopes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Env3.cpp">
+      <Filter>MagmaSynthesiser_LAVA\Source\SynthComponents\Envelopes</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Osc1.cpp">
       <Filter>MagmaSynthesiser_LAVA\Source\SynthComponents\Oscillators</Filter>
     </ClCompile>
@@ -473,7 +488,7 @@
       <Filter>MagmaSynthesiser_LAVA\Source\SynthComponents\Oscillators</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\SynthVoice.cpp">
-      <Filter>MagmaSynthesiser_LAVA\Source</Filter>
+      <Filter>MagmaSynthesiser_LAVA\Source\Synthesiser</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\..\JUCE\modules\juce_audio_basics\buffers\juce_AudioChannelSet.cpp">
       <Filter>JUCE Modules\juce_audio_basics\buffers</Filter>
@@ -2622,6 +2637,15 @@
     <ClInclude Include="..\..\Source\PluginEditor.h">
       <Filter>MagmaSynthesiser_LAVA\Source</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Env1.h">
+      <Filter>MagmaSynthesiser_LAVA\Source\SynthComponents\Envelopes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Env2.h">
+      <Filter>MagmaSynthesiser_LAVA\Source\SynthComponents\Envelopes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Env3.h">
+      <Filter>MagmaSynthesiser_LAVA\Source\SynthComponents\Envelopes</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Osc1.h">
       <Filter>MagmaSynthesiser_LAVA\Source\SynthComponents\Oscillators</Filter>
     </ClInclude>
@@ -2631,17 +2655,17 @@
     <ClInclude Include="..\..\Source\Osc3.h">
       <Filter>MagmaSynthesiser_LAVA\Source\SynthComponents\Oscillators</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Waveform.h">
+    <ClInclude Include="..\..\Source\WaveForm.h">
       <Filter>MagmaSynthesiser_LAVA\Source\SynthComponents\Oscillators</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Wavetype.h">
+    <ClInclude Include="..\..\Source\WaveType.h">
       <Filter>MagmaSynthesiser_LAVA\Source\SynthComponents\Oscillators</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\SynthVoice.h">
-      <Filter>MagmaSynthesiser_LAVA\Source</Filter>
+      <Filter>MagmaSynthesiser_LAVA\Source\Synthesiser</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\SynthSound.h">
-      <Filter>MagmaSynthesiser_LAVA\Source</Filter>
+      <Filter>MagmaSynthesiser_LAVA\Source\Synthesiser</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\..\JUCE\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.h">
       <Filter>JUCE Modules\juce_audio_basics\audio_play_head</Filter>

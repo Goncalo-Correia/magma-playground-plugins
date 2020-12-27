@@ -58,11 +58,7 @@ public:
 private:
     juce::Synthesiser synth;
 
-    juce::dsp::Oscillator<float> osc1;
-    juce::dsp::Oscillator<float> osc2;
-    juce::dsp::Oscillator<float> osc3;
-
-    juce::dsp::Gain<float> masterGain;
+    SynthVoice synthVoice;
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MagmaSynthesiser_lavaAudioProcessor)
 };

@@ -10,13 +10,34 @@
 
 #pragma once
 
-#include <JuceHeader.h>
-#include "Wavetype.h"
+#include "WaveType.h"
 
-class Waveform 
+class WaveForm 
 {
 public:
 
+    float WaveForm::generateWaveForm (WaveType waveType, float x)
+    {
+        return calculateWaveForm(waveType, x);
+    }
+
 private:
-    Wavetype wavetype;
+
+    float calculateWaveForm(WaveType waveType, float x)
+    {
+        if (waveType == WaveType::SINE)
+        {
+            return std::sin(x);
+        }
+
+        if (waveType == WaveType::SAW)
+        {
+            return x / juce::MathConstants<float>::pi;
+        }
+
+        if (waveType == WaveType::SQUARE)
+        {
+            return x < 0.0f ? -1.0f : 1.0f;
+        }
+    }
 };

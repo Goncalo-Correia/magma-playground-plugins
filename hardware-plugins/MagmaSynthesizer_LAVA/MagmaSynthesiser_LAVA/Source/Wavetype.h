@@ -10,9 +10,7 @@
 
 #pragma once
 
-#include <JuceHeader.h>
-
-enum Wavetype 
+enum class WaveType 
 {
     SINE,
     SAW,
