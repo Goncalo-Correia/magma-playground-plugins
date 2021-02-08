@@ -50,16 +50,16 @@ void SynthVoice::prepareToPlay(double sampleRate, int samplesPerBlock, int numOu
     processSpec.sampleRate = sampleRate;
     processSpec.numChannels = numOutputChannels;
 
-    adsr1.setSampleRate(sampleRate);
-    adsr2.setSampleRate(sampleRate);
-    adsr3.setSampleRate(sampleRate);
-
-    osc1.prepare (processSpec);
-    osc2.prepare (processSpec);
-    osc3.prepare (processSpec);
+    osc1.prepare(processSpec);
+    osc2.prepare(processSpec);
+    osc3.prepare(processSpec);
 
     masterGain.prepare(processSpec);
     masterGain.setGainLinear(0.01f);
+
+    adsr1.setSampleRate(sampleRate);
+    adsr2.setSampleRate(sampleRate);
+    adsr3.setSampleRate(sampleRate);
 
     isPrepared = true;
 }
@@ -73,13 +73,14 @@ void SynthVoice::renderNextBlock(juce::AudioBuffer<float>& outputBuffer, int sta
         outputBuffer
     };
 
-    adsr1.applyEnvelopeToBuffer(outputBuffer, startSample, numSamples);
-    adsr2.applyEnvelopeToBuffer(outputBuffer, startSample, numSamples);
-    adsr3.applyEnvelopeToBuffer(outputBuffer, startSample, numSamples);
-
     osc1.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
     osc2.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
     osc3.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
 
     masterGain.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
+
+    adsr1.applyEnvelopeToBuffer(outputBuffer, startSample, numSamples);
+    adsr2.applyEnvelopeToBuffer(outputBuffer, startSample, numSamples);
+    adsr3.applyEnvelopeToBuffer(outputBuffer, startSample, numSamples);
+
 }

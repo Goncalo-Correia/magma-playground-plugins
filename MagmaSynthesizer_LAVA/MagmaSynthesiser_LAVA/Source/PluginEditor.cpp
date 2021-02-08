@@ -13,8 +13,12 @@
 MagmaSynthesiser_lavaAudioProcessorEditor::MagmaSynthesiser_lavaAudioProcessorEditor (MagmaSynthesiser_lavaAudioProcessor& p)
     : AudioProcessorEditor (&p), audioProcessor (p)
 {
-    // Make sure that before the constructor has finished, you've set the
-    // editor's size to whatever you need it to be.
+    gainSlider.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
+    gainSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, true, 100, 50);
+    addAndMakeVisible(gainSlider);
+
+    gainSliderAttachment = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.apvts, "GAIN", gainSlider);
+
     setSize (400, 300);
 }
 
@@ -35,6 +39,5 @@ void MagmaSynthesiser_lavaAudioProcessorEditor::paint (juce::Graphics& g)
 
 void MagmaSynthesiser_lavaAudioProcessorEditor::resized()
 {
-    // This is generally where you'll want to lay out the positions of any
-    // subcomponents in your editor..
+    gainSlider.setBounds(getWidth() / 2 - 100, getHeight() / 2 - 50, 200, 100);
 }

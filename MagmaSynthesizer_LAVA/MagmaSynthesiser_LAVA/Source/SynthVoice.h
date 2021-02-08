@@ -12,7 +12,6 @@
 
 #include <JuceHeader.h>
 #include "SynthSound.h"
-#include "WaveForm.h"
 #include "WaveType.h"
 
 class SynthVoice : public juce::SynthesiserVoice
@@ -28,8 +27,10 @@ public:
     void renderNextBlock(juce::AudioBuffer<float>& outputBuffer, int startSample, int numSamples) override;
 
 private:
-    WaveForm waveForm;
-    
+    bool isPrepared { false };
+
+    juce::dsp::Gain<float> masterGain;
+
     juce::ADSR adsr1;
     juce::ADSR adsr2;
     juce::ADSR adsr3;
@@ -61,7 +62,5 @@ private:
         }
     };
 
-    juce::dsp::Gain<float> masterGain;
 
-    bool isPrepared { false };
 };

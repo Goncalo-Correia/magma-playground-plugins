@@ -29,7 +29,6 @@
           <FILE id="HxM5i6" name="Osc2.h" compile="0" resource="0" file="Source/Osc2.h"/>
           <FILE id="zwcV73" name="Osc3.cpp" compile="1" resource="0" file="Source/Osc3.cpp"/>
           <FILE id="z0c3II" name="Osc3.h" compile="0" resource="0" file="Source/Osc3.h"/>
-          <FILE id="u4c78H" name="WaveForm.h" compile="0" resource="0" file="Source/WaveForm.h"/>
           <FILE id="jUasK7" name="WaveType.h" compile="0" resource="0" file="Source/WaveType.h"/>
         </GROUP>
       </GROUP>

@@ -13,13 +13,14 @@
 MagmaSynthesiser_lavaAudioProcessor::MagmaSynthesiser_lavaAudioProcessor()
 #ifndef JucePlugin_PreferredChannelConfigurations
     : AudioProcessor(BusesProperties()
-#if ! JucePlugin_IsMidiEffect
-#if ! JucePlugin_IsSynth
-        .withInput("Input", juce::AudioChannelSet::stereo(), false)
-#endif
-        .withOutput("Output", juce::AudioChannelSet::stereo(), true)
-#endif
-    )
+        #if ! JucePlugin_IsMidiEffect
+        #if ! JucePlugin_IsSynth
+                .withInput("Input", juce::AudioChannelSet::stereo(), false)
+        #endif
+                .withOutput("Output", juce::AudioChannelSet::stereo(), true)
+        #endif
+            ),
+    apvts(*this, nullptr, "Parameters", createParameters())
 #endif
 {
     synth.addSound(new SynthSound());
@@ -189,4 +190,21 @@ void MagmaSynthesiser_lavaAudioProcessor::setStateInformation (const void* data,
 juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()
 {
     return new MagmaSynthesiser_lavaAudioProcessor();
+}
+
+juce::AudioProcessorValueTreeState::ParameterLayout MagmaSynthesiser_lavaAudioProcessor::createParameters() 
+{
+    std::vector<std::unique_ptr<juce::RangedAudioParameter>> parameters;
+
+    parameters.push_back(std::make_unique<juce::AudioParameterFloat>("GAIN", "Gain", 0.0f, 1.0f, 0.5f));
+
+    //ADD PARAMETERS
+    //OSC
+    //ADSR
+    //FILTER
+
+    return
+    {
+        parameters.begin(), parameters.end()
+    };
 }
