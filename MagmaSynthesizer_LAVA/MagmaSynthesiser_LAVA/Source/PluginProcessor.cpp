@@ -8,6 +8,7 @@
 
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
+#include "Parameters.h"
 
 //==============================================================================
 MagmaSynthesiser_lavaAudioProcessor::MagmaSynthesiser_lavaAudioProcessor()
@@ -196,7 +197,7 @@ juce::AudioProcessorValueTreeState::ParameterLayout MagmaSynthesiser_lavaAudioPr
 {
     std::vector<std::unique_ptr<juce::RangedAudioParameter>> parameters;
 
-    parameters.push_back(std::make_unique<juce::AudioParameterFloat>("GAIN", "Gain", 0.0f, 1.0f, 0.5f));
+    parameters.push_back(std::make_unique<juce::AudioParameterFloat>(Parameters.GAIN_ID, "Gain", 0.0f, 1.0f, 0.5f));
 
     //ADD PARAMETERS
     //OSC
