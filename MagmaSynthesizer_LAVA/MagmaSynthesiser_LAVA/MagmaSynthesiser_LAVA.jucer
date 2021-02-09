@@ -5,6 +5,7 @@
               jucerFormatVersion="1" pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn">
   <MAINGROUP id="SQktTJ" name="MagmaSynthesiser_LAVA">
     <GROUP id="{0095B20F-7ACE-D664-A0F4-F03104094DA1}" name="Source">
+      <FILE id="Mmv8dI" name="Parameters.h" compile="0" resource="0" file="Source/Parameters.h"/>
       <FILE id="mX8klF" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="lXnf6G" name="PluginProcessor.h" compile="0" resource="0"

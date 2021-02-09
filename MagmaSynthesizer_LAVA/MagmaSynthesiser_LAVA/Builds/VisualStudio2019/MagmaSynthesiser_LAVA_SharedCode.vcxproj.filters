@@ -2631,6 +2631,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\Parameters.h">
+      <Filter>MagmaSynthesiser_LAVA\Source</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\PluginProcessor.h">
       <Filter>MagmaSynthesiser_LAVA\Source</Filter>
     </ClInclude>
