@@ -199,6 +199,21 @@ juce::AudioProcessorValueTreeState::ParameterLayout MagmaSynthesiser_lavaAudioPr
 
     parameters.push_back(std::make_unique<juce::AudioParameterFloat>(GAIN_ID, GAIN_LABEL, 0.0f, 1.0f, 0.5f));
 
+    parameters.push_back(std::make_unique<juce::AudioParameterFloat>(ADSR1_ATTACK_ID, ADSR1_ATTACK_LABEL, 0.0f, 1.0f, 0.5f));
+    parameters.push_back(std::make_unique<juce::AudioParameterFloat>(ADSR1_DECAY_ID, ADSR1_DECAY_LABEL, 0.0f, 1.0f, 0.5f));
+    parameters.push_back(std::make_unique<juce::AudioParameterFloat>(ADSR1_SUSTAIN_ID, ADSR1_SUSTAIN_LABEL, 0.0f, 1.0f, 0.5f));
+    parameters.push_back(std::make_unique<juce::AudioParameterFloat>(ADSR1_RELEASE_ID, ADSR1_RELEASE_LABEL, 0.0f, 1.0f, 0.5f));
+
+    parameters.push_back(std::make_unique<juce::AudioParameterFloat>(ADSR2_ATTACK_ID, ADSR2_ATTACK_LABEL, 0.0f, 1.0f, 0.5f));
+    parameters.push_back(std::make_unique<juce::AudioParameterFloat>(ADSR2_DECAY_ID, ADSR2_DECAY_LABEL, 0.0f, 1.0f, 0.5f));
+    parameters.push_back(std::make_unique<juce::AudioParameterFloat>(ADSR2_SUSTAIN_ID, ADSR2_SUSTAIN_LABEL, 0.0f, 1.0f, 0.5f));
+    parameters.push_back(std::make_unique<juce::AudioParameterFloat>(ADSR2_RELEASE_ID, ADSR2_RELEASE_LABEL, 0.0f, 1.0f, 0.5f));
+
+    parameters.push_back(std::make_unique<juce::AudioParameterFloat>(ADSR3_ATTACK_ID, ADSR3_ATTACK_LABEL, 0.0f, 1.0f, 0.5f));
+    parameters.push_back(std::make_unique<juce::AudioParameterFloat>(ADSR3_DECAY_ID, ADSR3_DECAY_LABEL, 0.0f, 1.0f, 0.5f));
+    parameters.push_back(std::make_unique<juce::AudioParameterFloat>(ADSR3_SUSTAIN_ID, ADSR3_SUSTAIN_LABEL, 0.0f, 1.0f, 0.5f));
+    parameters.push_back(std::make_unique<juce::AudioParameterFloat>(ADSR3_RELEASE_ID, ADSR3_RELEASE_LABEL, 0.0f, 1.0f, 0.5f));
+
     //ADD PARAMETERS
     //OSC
     //ADSR
